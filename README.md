@@ -1,112 +1,103 @@
-# Workspace - Gestor de Tareas y Productividad
+# MANAGER - Gestor de Tareas y Productividad
 
-Aplicación web SPA construida con React y Vite para gestionar tareas diarias de un equipo de trabajo. Permite iniciar sesión de forma simulada, crear tareas, editarlas, cambiar su estado, eliminarlas con confirmación y filtrar por estado.
+Aplicación SPA desarrollada con React + Vite para la gestión de tareas y productividad de equipos.
 
-## Stack tecnológico
+---
 
-- React.js + Vite
+## Tecnologías utilizadas
+
+- React
+- Vite
 - React Router DOM
-- Hooks nativos: useState, useEffect, useMemo
 - Tailwind CSS
 - SweetAlert2
-- JSON Server como API REST local
-- LocalStorage para simulación de sesión
+- JSON Server
+- LocalStorage
+- Git & GitFlow
+
+---
 
 ## Funcionalidades
 
-- Login público en `/login`
-- Persistencia de sesión en LocalStorage
-- Ruta protegida `/tablero`
-- Cierre de sesión
-- CRUD completo de tareas
-- Confirmación antes de eliminar con SweetAlert2
-- Filtros por estado: Todas, Pendiente, En Progreso, Completada
-- Indicadores de carga y manejo de errores
+- Inicio de sesión con LocalStorage
+- Protección de rutas
+- CRUD de tareas
+- Filtros por estado
+- Confirmaciones con SweetAlert2
 - Diseño responsive
+- Persistencia de sesión
+- API simulada con JSON Server
 
-## Estructura del proyecto
+---
 
-```txt
-src/
-  components/
-  hooks/
-  pages/
-  routes/
-  services/
-  utils/
+## Instalación del proyecto
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/Sebas-1013/MANAGER.git
 ```
 
-## Instalación
+Entrar al proyecto:
+
+```bash
+cd MANAGER
+```
+
+Instalar dependencias:
 
 ```bash
 npm install
 ```
 
-## Variables de entorno
+---
 
-Copia `.env.example` y crea `.env`:
-
-```bash
-VITE_API_URL=http://localhost:3001/tasks
-```
-
-## Ejecutar API local
-
-En una terminal:
+## Ejecutar JSON Server
 
 ```bash
-npm run api
+json-server --watch db.json --port 3001
 ```
 
-## Ejecutar aplicación
+---
 
-En otra terminal:
+## Ejecutar aplicación React
 
 ```bash
 npm run dev
 ```
 
-Abre la URL que entregue Vite, normalmente:
+---
+
+## Build de producción
 
 ```bash
-http://localhost:5173
-```
-
-## Scripts disponibles
-
-```bash
-npm run dev
-npm run api
 npm run build
-npm run preview
 ```
 
-## GitFlow sugerido
+---
 
-```bash
-git init
-git checkout -b develop
+## Deploy
 
-git checkout -b feature/login-component
-git add .
-git commit -m "feat: add login with localStorage"
-git checkout develop
-git merge feature/login-component
+Aplicación desplegada en Vercel:
 
-git checkout -b feature/task-crud
-git commit -m "feat: implement task CRUD operations"
-git checkout develop
-git merge feature/task-crud
-
-git checkout -b feature/responsive-ui
-git commit -m "style: improve responsive dashboard UI"
-git checkout develop
-git merge feature/responsive-ui
-
-git checkout -b main
-git merge develop
+```txt
+https://manager-vert-two.vercel.app
 ```
 
-## Despliegue
+---
 
-Para desplegar en Vercel o Netlify, configura la variable `VITE_API_URL` apuntando a una API pública, por ejemplo MockAPI o un JSON Server desplegado.
+## GitFlow implementado
+
+Ramas utilizadas:
+
+- main
+- develop
+- feature/login-flow
+- feature/protected-routes
+- feature/tasks-crud
+
+---
+
+## Autor
+
+Proyecto desarrollado para prueba técnica frontend React.
